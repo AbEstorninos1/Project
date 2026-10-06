@@ -1,0 +1,162 @@
+:root {
+    --main: #E3CDB4;
+    --soft: #FAF4EC;
+    --second: #2E2118;
+    --border: #0000004d;
+    --accent: #6F4E37;
+    --green: #4E8B57;
+    --grey: #FAF4EC;
+    --grey-dark: #CBB296;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input,
+button {
+    font-family: inherit;
+}
+
+body {
+    font-family: Cambria, Caladea, Georgia, serif;
+    background: var(--soft);
+    color: var(--second);
+}
+
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 440px;
+    background: var(--main);
+    color: var(--second);
+    padding: 50px 45px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+.login-box header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.login-box h1 {
+    font-size: 28px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    height: 50px;
+    padding: 0 14px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    background: var(--soft);
+    color: var(--second);
+    outline: none;
+    font-size: 14px;
+}
+
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+    color: #8C7B6E;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: var(--accent);
+    background: var(--soft);
+}
+
+.form-password {
+    position: relative;
+}
+
+.form-password input {
+    padding-right: 45px;
+}
+
+.showPassword {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 35px;
+    height: 35px;
+    border: none;
+    background: transparent;
+    color: var(--second);
+    cursor: pointer;
+}
+
+.form-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.form-checkbox input {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--accent);
+}
+
+.form-checkbox p {
+    margin: 0;
+}
+
+input[type="submit"] {
+    height: 50px;
+    border: 2px solid var(--accent);
+    border-radius: 5px;
+    background: var(--accent);
+    color: var(--soft);
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+input[type="submit"]:hover {
+    background: var(--second);
+    color: var(--soft);
+}
+
+.create-account {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.create-account a {
+    color: var(--second);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.create-account a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+    .login-box {
+        padding: 40px 25px;
+    }
+}

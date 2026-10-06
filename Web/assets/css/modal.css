@@ -1,0 +1,117 @@
+:root {
+    --main: #E3CDB4;
+    --soft: #FAF4EC;
+    --second: #2E2118;
+    --border: #0000004d;
+    --accent: #6F4E37;
+    --green: #4E8B57;
+    --grey: #FAF4EC;
+    --grey-dark: #CBB296;
+}
+
+button {
+    font-family: inherit;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-box {
+    --color: var(--accent);
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    background: var(--main);
+    color: var(--second);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.modal-box.success {
+    --color: var(--green);
+}
+
+.modal-body {
+    padding: 45px 30px;
+}
+
+.modal-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px;
+    border-radius: 50%;
+    background: var(--color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-icon svg {
+    display: none;
+    width: 40px;
+    height: 40px;
+    fill: none;
+    stroke: var(--soft);
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.modal-box.success .icon-check,
+.modal-box.error .icon-x,
+.modal-box.confirm .icon-question {
+    display: block;
+}
+
+#modalTitle {
+    margin-bottom: 16px;
+    font-size: 22px;
+    color: var(--color);
+}
+
+#modalMessage {
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+#modalButton,
+#modalYes,
+#modalNo {
+    height: 54px;
+    border: none;
+    background: var(--color);
+    color: var(--soft);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#modalButton {
+    width: 100%;
+    border-radius: 0 0 8px 8px;
+}
+
+.modal-confirm {
+    display: none;
+}
+
+#modalYes {
+    flex: 1;
+    border-radius: 0 0 0 8px;
+}
+
+#modalNo {
+    flex: 1;
+    border-radius: 0 0 8px 0;
+    background: var(--grey-dark);
+    color: var(--second);
+}

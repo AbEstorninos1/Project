@@ -1,0 +1,136 @@
+:root {
+    --main: #E3CDB4;
+    --soft: #FAF4EC;
+    --second: #2E2118;
+    --border: #0000004d;
+    --accent: #6F4E37;
+    --green: #4E8B57;
+    --grey: #FAF4EC;
+    --grey-dark: #CBB296;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input,
+button {
+    font-family: inherit;
+}
+
+body {
+    font-family: Cambria, Caladea, Georgia, serif;
+    background: var(--soft);
+    color: var(--second);
+}
+
+.register-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+}
+
+.register-box {
+    width: 100%;
+    max-width: 500px;
+    background: var(--main);
+    color: var(--second);
+    padding: 50px 45px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+.register-box header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.register-box h1 {
+    font-size: 28px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form > div {
+    width: 100%;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    height: 50px;
+    padding: 0 14px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    background: var(--soft);
+    color: var(--second);
+    outline: none;
+    font-size: 14px;
+}
+
+input[type="text"]::placeholder,
+input[type="tel"]::placeholder,
+input[type="url"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+    color: #8C7B6E;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: var(--accent);
+    background: var(--soft);
+}
+
+input[type="submit"] {
+    width: 100%;
+    height: 50px;
+    border: 2px solid var(--accent);
+    border-radius: 5px;
+    background: var(--accent);
+    color: var(--soft);
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+input[type="submit"]:hover {
+    background: var(--second);
+    color: var(--soft);
+}
+
+.login {
+    display: block;
+    margin-top: 30px;
+    text-align: center;
+    color: var(--second);
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.login:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+    .register-box {
+        padding: 40px 25px;
+    }
+}

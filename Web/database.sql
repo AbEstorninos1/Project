@@ -1,0 +1,12 @@
+CREATE DATABASE IF NOT EXISTS project;
+USE project;
+
+CREATE TABLE IF NOT EXISTS users (
+    id         INT AUTO_INCREMENT PRIMARY KEY,
+    fullname   VARCHAR(100)  NOT NULL,
+    number     VARCHAR(20)   NOT NULL,
+    email      VARCHAR(150)  NOT NULL UNIQUE,
+    url        VARCHAR(255)  NOT NULL,
+    password   VARCHAR(255)  NOT NULL,
+    created_at TIMESTAMP     DEFAULT CURRENT_TIMESTAMP
+);
